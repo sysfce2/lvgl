@@ -1,7 +1,7 @@
 .. raw:: html
 
    <p align="left">
-     <a href="https://github.com/sponsors/lvgl" target="_blank"><img align="left" src="https://lvgl.io/assets/images/sponsor.png" height="32px"></a>
+     <a href="https://github.com/sponsors/lvgl" target="_blank"><img align="left" src="https://lvgl.io/github-assets/sponsor.png" height="32px"></a>
    </p>
 
    <p align="right">
@@ -15,7 +15,7 @@
 .. raw:: html
 
    <p align="center">
-     <img src="https://lvgl.io/assets/images/logo_lvgl.png">
+     <img src="https://lvgl.io/github-assets/logo-colored.png" width=300px>
    </p>
 
 .. raw:: html
@@ -30,9 +30,9 @@
 .. raw:: html
 
    <div align="center">
-     <img src="https://github.com/kisvegabor/test/raw/master/smartwatch_demo.gif">
+     <img src="https://lvgl.io/github-assets/smartwatch-demo.gif">
      &nbsp;
-     <img border="1px" src="https://lvgl.io/assets/images/lvgl_widgets_demo.gif">
+     <img border="1px" src="https://lvgl.io/github-assets/widgets-demo.gif">
    </div>
    <br>
    <p align="center">
@@ -94,7 +94,7 @@ RAM 和 128 KB Flash、C 编译器、帧缓冲区和至少 1/10 屏幕大小的�
 
 **绑定和构建支持**
 
--  `Microython 绑定 <https://blog.lvgl.io/2019-02-20/micropython-bindings>`__
+-  `MicroPython 绑定 <https://blog.lvgl.io/2019-02-20/micropython-bindings>`__
    公开 LVGL的API
 -  `PikaScript 绑定 <https://blog.lvgl.io/2022-08-24/pikascript-and-lvgl>`__
    在 MCU 上的更轻更简单的 Python 版本

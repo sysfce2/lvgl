@@ -1,5 +1,5 @@
 
-<a href="https://github.com/sponsors/lvgl" target="_blank"><img align="left" src="https://lvgl.io/assets/images/sponsor.png" height="32px"></a>
+<a href="https://github.com/sponsors/lvgl" target="_blank"><img align="left" src="https://lvgl.io/github-assets/sponsor.png" height="32px"></a>
 
 <p align="right">
   <b>English</b> | <a href="./docs/README_zh.rst">中文</a> | <a href="./docs/README_pt_BR.rst">Português do Brasil</a> | <a href="./docs/README_jp.rst">日本語</a>
@@ -8,15 +8,15 @@
 <br>
 
 <p align="center">
-  <img src="https://lvgl.io/assets/images/logo_lvgl.png">
+  <img src="https://lvgl.io/github-assets/logo-colored.png" width=300px>
 </p>
 
   <h1 align="center">Light and Versatile Graphics Library</h1>
   <br>
 <div align="center">
-  <img src="https://github.com/kisvegabor/test/raw/master/smartwatch_demo.gif">
+  <img src="https://lvgl.io/github-assets/smartwatch-demo.gif">
   &nbsp;
-  <img border="1px" src="https://lvgl.io/assets/images/lvgl_widgets_demo.gif">
+  <img border="1px" src="https://lvgl.io/github-assets/widgets-demo.gif">
 </div>
 <br>
 <p align="center">
@@ -24,7 +24,7 @@
 <a href="https://docs.lvgl.io/" title="Detailed documentation with 100+ examples">Docs</a> |
 <a href="https://forum.lvgl.io" title="Get help and help others">Forum</a> |
 <a href="https://lvgl.io/demos" title="Demos running in your browser">Demos</a> |
-<a href="https://lvgl.io/services" title="Graphics design, UI implementation and consulting">Services</a> 
+<a href="https://lvgl.io/services" title="Graphics design, UI implementation and consulting">Services</a>
 </p>
 <br>
 
@@ -60,7 +60,7 @@ Our team is ready to help you with graphics design, UI implementation and consul
   - [Multiple display](https://docs.lvgl.io/master/overview/display.html#multiple-display-support) support.
 
 **Binding and Build Support**
-  - [Micropython Binding](https://blog.lvgl.io/2019-02-20/micropython-bindings) exposes LVGL API
+  - [MicroPython Binding](https://blog.lvgl.io/2019-02-20/micropython-bindings) exposes LVGL API
   - [PikaScript Binding](https://blog.lvgl.io/2022-08-24/pikascript-and-lvgl) python on MCU lighter and easier.
   - No custom build system is used. You can build LVGL as you build the other files of your project.
   - Support for Make and [CMake](https://docs.lvgl.io/master/integration/building/cmake.html) is included out of the box.

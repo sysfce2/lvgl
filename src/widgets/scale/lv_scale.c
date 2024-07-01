@@ -696,11 +696,9 @@ static void scale_calculate_main_compensation(lv_obj_t * obj)
     lv_obj_init_draw_line_dsc(obj, LV_PART_ITEMS, &minor_tick_dsc);
 
     uint32_t tick_idx = 0;
-    uint32_t major_tick_idx = 0;
     for(tick_idx = 0; tick_idx < total_tick_count; tick_idx++) {
 
         const bool is_major_tick = tick_idx % scale->major_tick_every == 0;
-        if(is_major_tick) major_tick_idx++;
 
         const int32_t tick_value = lv_map(tick_idx, 0U, total_tick_count - 1, scale->range_min, scale->range_max);
 
@@ -1358,7 +1356,7 @@ static void scale_store_main_line_tick_width_compensation(lv_obj_t * obj, const 
     const bool is_last_tick = scale->total_tick_count == tick_idx;
     const int32_t tick_width = is_major_tick ? major_tick_width : minor_tick_width;
 
-    /* Exit early if tick_idx is not the first nor last tick on the main line */
+    /* Exit early if tick_idx is neither the first nor last tick on the main line */
     if(((!is_last_tick) && (!is_first_tick))
        /* Exit early if scale mode is round. It doesn't support main line compensation */
        || ((LV_SCALE_MODE_ROUND_INNER == scale->mode) || (LV_SCALE_MODE_ROUND_OUTER == scale->mode))) {

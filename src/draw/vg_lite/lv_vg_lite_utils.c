@@ -90,7 +90,7 @@ void lv_vg_lite_dump_info(void)
 
     vg_lite_uint32_t mem_avail = 0;
     vg_lite_get_mem_size(&mem_avail);
-    LV_LOG_USER("Memory Avaliable: %" LV_PRId32 " Bytes", (uint32_t)mem_avail);
+    LV_LOG_USER("Memory Available: %" LV_PRId32 " Bytes", (uint32_t)mem_avail);
 }
 
 const char * lv_vg_lite_error_string(vg_lite_error_t error)
@@ -398,7 +398,7 @@ vg_lite_buffer_format_t lv_vg_lite_vg_fmt(lv_color_format_t cf)
             return VG_LITE_NV12;
 
         default:
-            LV_LOG_ERROR("unsupport color format: %d", cf);
+            LV_LOG_ERROR("unsupported color format: %d", cf);
             break;
     }
 
@@ -489,7 +489,7 @@ void lv_vg_lite_buffer_format_bytes(
             *mul = 3;
             break;
         default:
-            LV_LOG_ERROR("unsupport color format: 0x%" PRIx32, (uint32_t)format);
+            LV_LOG_ERROR("unsupported color format: 0x%" PRIx32, (uint32_t)format);
             LV_ASSERT(false);
             break;
     }
@@ -1030,7 +1030,6 @@ lv_point_precise_t lv_vg_lite_matrix_transform_point(const vg_lite_matrix_t * ma
 
 void lv_vg_lite_set_scissor_area(const lv_area_t * area)
 {
-    LV_VG_LITE_CHECK_ERROR(vg_lite_enable_scissor());
     LV_VG_LITE_CHECK_ERROR(vg_lite_set_scissor(
                                area->x1,
                                area->y1,
@@ -1040,7 +1039,12 @@ void lv_vg_lite_set_scissor_area(const lv_area_t * area)
 
 void lv_vg_lite_disable_scissor(void)
 {
-    LV_VG_LITE_CHECK_ERROR(vg_lite_disable_scissor());
+    /* Restore full screen scissor */
+    LV_VG_LITE_CHECK_ERROR(vg_lite_set_scissor(
+                               0,
+                               0,
+                               LV_HOR_RES,
+                               LV_VER_RES));
 }
 
 void lv_vg_lite_flush(struct _lv_draw_vg_lite_unit_t * u)

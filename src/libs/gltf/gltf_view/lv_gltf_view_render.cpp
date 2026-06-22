@@ -14,9 +14,6 @@
 #include "../gltf_data/lv_gltf_data_internal.hpp"
 
 #include "../fastgltf/lv_fastgltf.hpp"
-#include "../../../misc/lv_types.h"
-#include "../../../misc/lv_array.h"
-#include "../../../stdlib/lv_sprintf.h"
 #include "../../../drivers/opengles/lv_opengles_private.h"
 #include "../../../drivers/opengles/lv_opengles_debug.h"
 #include "../math/lv_gltf_math.hpp"
@@ -480,6 +477,7 @@ static void render_materials(lv_gltf_t * viewer, lv_gltf_model_data_t * modeld, 
 
 static void render_skins(lv_gltf_t * viewer, lv_gltf_model_data_t * modeld)
 {
+    LV_UNUSED(viewer);
     size_t skin_count = lv_gltf_data_get_skins_size(modeld->model);
     if(skin_count == 0) {
         return;

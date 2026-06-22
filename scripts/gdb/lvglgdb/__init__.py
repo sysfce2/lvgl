@@ -1,4 +1,6 @@
-from .value import Value, ValueInput
+from ._version import __version__
+
+from .value import Value, ValueInput, CorruptedValue, CorruptedError
 from .lvgl import (
     curr_inst,
     LVDisplay,
@@ -13,7 +15,6 @@ from .lvgl import (
     ObjStyle,
     LVStyle,
     StyleEntry,
-    dump_style_info,
     dump_obj_styles,
     dump_obj_info,
     style_prop_name,
@@ -43,6 +44,10 @@ from .lvgl import (
     INDEV_TYPE_NAMES,
     LVGroup,
     LVObjClass,
+    OBJ_FLAG_NAMES,
+    decode_obj_flags,
+    OBJ_STATE_NAMES,
+    decode_obj_states,
     LVSubject,
     LVObserver,
     SUBJECT_TYPE_NAMES,
@@ -50,6 +55,7 @@ from .lvgl import (
 from . import cmds as cmds
 
 __all__ = [
+    "__version__",
     "curr_inst",
     "LVDisplay",
     "LVDrawBuf",
@@ -62,7 +68,6 @@ __all__ = [
     "ObjStyle",
     "LVStyle",
     "StyleEntry",
-    "dump_style_info",
     "dump_obj_styles",
     "dump_obj_info",
     "style_prop_name",
@@ -70,6 +75,8 @@ __all__ = [
     "format_style_value",
     "Value",
     "ValueInput",
+    "CorruptedValue",
+    "CorruptedError",
     "LVCacheEntry",
     "LVCacheLRURB",
     "LVCacheLRURBIterator",
@@ -92,6 +99,10 @@ __all__ = [
     "INDEV_TYPE_NAMES",
     "LVGroup",
     "LVObjClass",
+    "OBJ_FLAG_NAMES",
+    "decode_obj_flags",
+    "OBJ_STATE_NAMES",
+    "decode_obj_states",
     "LVSubject",
     "LVObserver",
     "SUBJECT_TYPE_NAMES",
